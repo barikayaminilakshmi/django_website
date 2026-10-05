@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="product-details">
+
+
+    <div class="details-image">
+
+        <img src="{{product.image.url}}" 
+             alt="{{product.pro_name}}">
+
+    </div>
+
+
+
+    <div class="details-content">
+
+
+        <h1>{{product.pro_name}}</h1>
+
+
+        <p class="category">
+            {{product.category}}
+        </p>
+
+
+        <h2>
+            ₹{{product.price}}
+        </h2>
+
+
+        <p>
+            {{product.description}}
+        </p>
+
+
+        <p>
+            <b>Available Stock:</b> 
+            {{product.stock}}
+        </p>
+
+
+        <a href="/" class="btn">
+            ← Back to Products
+        </a>
+
+
+    </div>
+
+
+</div>
+
+{% endblock %}
